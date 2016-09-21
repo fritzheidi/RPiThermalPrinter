@@ -9,7 +9,7 @@ These steps are for the tiny thermal printer from Adafruit(Which I'd like to add
 1. Start the pi - Assuming Raspberry Pi has been already been setup with Raspbian (Wheezy or Jessie).  
 2. The tiny thermal printer has the option to use USB so that's what I used. Plug in the USB to the printer and a port on the pi.  
 3. **Important:** Plug in the ground and 5V (red and black wires to the GPIO Header **first**.  For RPi2 the pin numbers were 2 and 6.  **Then** plug it into the printer, this way there is less chance to accidentally plug in the wrong pins on the pi and blow something up.  
-4. Cool, now open the terminal and type `echo -e "Testing my cool printer." > /dev/ttyUSB0` to print a test. You might have to click the button to feed the paper to see if it printed.  
+4. Cool, now open the terminal and type `echo "Testing my cool printer." > /dev/ttyUSB0` [^1] to print a test. You might have to click the button to feed the paper to see if it printed.  
 
 If it doesn't work:
 
@@ -20,3 +20,6 @@ If it doesn't work:
 If it worked: 
 
 We get to install some stuff!
+
+
+[^1]: This command writes this string to a new file in the directory /dev
